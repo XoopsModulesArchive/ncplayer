@@ -1,0 +1,42 @@
+<style>
+.checkbox 
+{
+	border:1px solid #ccc ;
+}
+</style>
+<script type="text/javascript" src="<{$block.dewplayer}>" ></script>
+<div style="background-color:#eee;">
+	<div id="url" url="<{$block.url}>"></div>
+	<div id="listurl" url="<{$block.listurl}>"></div>
+	<div id="searchurl" url="<{$block.searchurl}>"></div>
+	<div id="musicinfo" style="color:red;"></div>
+	<div id="add1" style="display:none">
+		<div style="margin:2px;">
+			<input id="musicname" type="text" name="musicname" value="<{$smarty.const._NCPLAYER_BLOCK_MUSICNAME}>" style="width:66%;" />
+			<input id="musicbutton" op="add" type="button" name="musicbutton" value="add" style="width:30%;" />
+		</div>
+		<div style="margin:2px;"><input id="musicurl"  type="text" name="musicurl" value="<{$smarty.const._NCPLAYER_BLOCK_MUSICURLVALURE}>" style="width:100%;" /></div>
+	</div>
+	<div id="search1" style="display:none">
+		<div>
+			<input id="searchword" type="text" name="musicsearch" style="width:66%;"/>
+			<input id="musicsearch" op="search" type="button" name="search" value="Go" style="width:30%;" />
+		</div>
+		<div id="searchresult"></div>
+	</div>	
+	<div id="top5001" style="display:none">
+		<div>
+			<input id="top500button" op="list" type="button" name="top500button" value="Go baidu top 500 music list" style="width:100%;" />
+		</div>
+		<div id="top500result"></div>
+	</div>	
+	<div id="player">
+	<object type="application/x-shockwave-flash" 
+		data="<{$block.player}>/dewplayer.swf?mp3=<{$block.default}>" width="100%" height="20" bgcolor="#jjj">
+		<param name="movie" value="<{$block.player}>/dewplayer.swf?mp3=<{$block.default}>" /> 
+		<param name="bgcolor" value="#ooo">
+	</object>
+	</div>
+	<div id="musiclist"></div>
+	<div id="multimusiclist" musiclist="" ></div>
+</div>
